@@ -63,6 +63,7 @@ const ClassicCard = () => {
                     color="text-secondary"
                 />
                 <div className="pt-8">
+                    {/* Used dummy data as this data wasn't available in the response of API */}
                     {classicData?.map((obj, i) => (
                         <div className="flex justify-between" key={i}>
                             <p className="font-semibold text-f14">{obj.a}</p>

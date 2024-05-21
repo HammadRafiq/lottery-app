@@ -30,7 +30,11 @@ const CosmicCard = () => {
     return (
         <div className="rounded-card bg-background-primary">
             <div className="p-15">
-                <CardHeader title={CosmicSvg} subtitle={data?.data?.roundNumber} icon={Zoom} />
+                <CardHeader
+                    title={CosmicSvg}
+                    subtitle={data?.data?.roundNumber}
+                    icon={Zoom}
+                />
                 <div className="flex pt-25 pb-15">
                     {data?.data?.previousWinningticket?.map((elem: number) => (
                         <NumberCard value={elem} />

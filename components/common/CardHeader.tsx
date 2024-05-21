@@ -1,6 +1,9 @@
 import Image from "next/image"
 
-const CardHeader = ({ title, subtitle, icon, color="text-primary" }: { title: string, subtitle: string, icon: string, color?: string }) => {
+const CardHeader = (
+    { title, subtitle, icon, color = "text-primary" }:
+        { title: string, subtitle: string, icon: string, color?: string }) => {
+            
     return (
         <div className='flex justify-between font-sans font-bold'>
             <div className="flex">

@@ -37,7 +37,7 @@ const PoolStatus = (
     return (
         <div>
             <div>
-                <div className={`${expand ? "justify-start" : "justify-center"} flex cursor-pointer`} onClick={() => toggleExpand(true)}>
+                <div data-testid="expand-btn" className={`${expand ? "justify-start" : "justify-center"} flex cursor-pointer`} onClick={() => toggleExpand(true)}>
                     <div className="flex">
                         {!expand && (
                             <Image src={Expand} alt="expand" />
@@ -46,7 +46,7 @@ const PoolStatus = (
                     </div>
                 </div>
                 {expand && (
-                    <div>
+                    <div data-testid="expanded-container">
                         {data?.map(obj => (
                             <div className={`${expand ? "show-text" : "hide-text"} flex justify-between pt-4`}>
                                 <Image src={symbols[obj.coinSymbol]} alt="btc" />
@@ -64,7 +64,7 @@ const PoolStatus = (
                         </div>
                         <div className="flex justify-center cursor-pointer" onClick={() => toggleExpand(false)}>
                             <Image src={Unexpand} alt="unexpand" />
-                            <p className="pl-8 text-f14">Close</p>
+                            <p data-testid="close-btn" className="pl-8 text-f14">Close</p>
                         </div>
                     </div>
                 )}
